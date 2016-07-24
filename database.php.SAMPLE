@@ -1,0 +1,16 @@
+<?php
+
+class Database {
+
+    function Database() {
+        $this->name = "db_name";
+        $this->username = "db_user";
+        $this->password = "db_password";
+    }
+
+    public function get_connection() {
+        return new mysqli("localhost",$this->username,$this->password,$this->name);
+    }
+}
+
+?>
